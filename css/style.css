@@ -1,0 +1,21 @@
+h1{
+    font-size: 28px;
+    font-family: monospace;
+    color: black;
+    padding:5px;
+    margin: 5px;
+    font-weight: bold;
+
+}
+
+p{
+    margin:5px;
+    padding:5px;
+    font-family: cursive;
+    color:black;
+    width: 400px;
+    
+}
+span{
+    color:blue;
+}
