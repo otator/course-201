@@ -1,14 +1,25 @@
+
 h1{
-    font-size: 28px;
+    font-size: 36px;
     font-family: monospace;
     color: black;
-    padding:5px;
-    margin: 5px;
+    padding:2px;
+    
     font-weight: bold;
+    text-shadow: 2px 2px blue;
 
+}
+h2{
+    padding:5px;
+    font-size: 22px;
+    font-family: cursive;
+    color: black;
+    font-weight: bold;
+    text-shadow: 2px 2px blue;
 }
 
 p{
+    font-size: 15px;
     margin:5px;
     padding:5px;
     font-family: cursive;
@@ -17,5 +28,49 @@ p{
     
 }
 span{
+    color:blue;
+    font-style: italic;
+}
+header{
+    
+    padding:5px;
+    background-color: rgba(0, 0, blue, alpha0.7);
+    
+}
+footer{
+    padding:5px;
+    border: blue solid 2px;
+}
+.movie-name{
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    margin-top: 15px;
+    padding: 5px;
+    font-weight: bold;
+}
+.info{
+    padding:5px;
+    font-size: 18px;
+    margin:20px;
+}
+.menu{
+    display:block ;
+    text-decoration: none;
+    font-size: 25px;
+    margin-left: 15px;
+    float: right;
+    overflow: hidden;
+    margin-bottom: 50px;
+    transform: translatey(-200%);
+    border: cornflowerblue 2px solid;
+    padding:2px
+}
+li a:link{
+    text-decoration: none;
+}
+li a:hover{
+    color: black;
+}
+li a:visited{
     color:blue;
 }
