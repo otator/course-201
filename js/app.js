@@ -8,77 +8,95 @@ var score = 0;
 
 //Questions for user to answer.
 //Q1
-var colorAnswer = prompt('Do you think that black is my favorite color (yes/no), (Y/n)?').toLowerCase();
 
-while(!isValidInput(colorAnswer) || colorAnswer === ''){
-  colorAnswer = prompt('Do you think that black is my favorite color (yes/no), (Y/n)?').toLowerCase();
+// added by raghad
 
-}
-if(colorAnswer === 'yes' || colorAnswer === 'y'){
-  //console.log("This is correct, my favorite color is black");
-  alert('This is correct, my favorite color is black');
-  score+=1;
-}else{
-  //console.log("Wrong, my favorite color is balck");
-  alert('Wrong, my favorite color is balck');
+var questions = ['Do you think that black is my favorite color (yes/no), (Y/n)?', 'Do you think that my favorite movie is The Prestige (yes/no), (Y/n?)','Do you think that I\'m familiar with Android Development(yes/no), (Y/n?)','Do you think that I can speak German(yes/no), (Y/n?)','Do you think that I am a leader(yes/no), (Y/n?)'];
+
+var answers = ['y','y','y','n','y'];
+var answer;
+for(var i=0; i< questions.length ; i++){
+  answer = prompt(questions[i]);
+  answer = validation(answer,questions[i]);
+  mainQuestion(answer, questions[i],answers[i]);
 }
 
-//Q2
-var movieAnswer = prompt('Do you think that my favorite movie is The Prestige (yes/no), (Y/n?)').toLowerCase();
-while(!isValidInput(movieAnswer) || movieAnswer === ''){
-  movieAnswer = prompt('Do you think that my favorite movie is The Prestige (yes/no), (Y/n?)').toLowerCase();
-}
-if(movieAnswer === 'yes' || movieAnswer === 'y'){
-  //console.log("This is correct, my favorite movie is The Prestige");
-  alert('This is correct, my favorite movie is The Prestige');
-  score+=1;
-}else{
-  //console.log("Wrong, my favorite movie is The Prestige");
-  alert('Wrong, my favorite movie is The Prestige');
-}
 
-//Q3
-var androidDevelopingAnswer = prompt('Do you think that I\'m familiar with Android Development(yes/no), (Y/n?)').toLowerCase();
-while(!isValidInput(androidDevelopingAnswer) || androidDevelopingAnswer ===''){
-  androidDevelopingAnswer = prompt('Do you think that I\'m familiar with Android Development(yes/no), (Y/n?)').toLowerCase();
-}
-if(androidDevelopingAnswer === 'yes' || androidDevelopingAnswer === 'y'){
-  //console.log("This is correct, I can develop apps in android");
-  alert('This is correct, I can develop apps in android');
-  score+=1;
-}else{
-  //console.log("Wrong, actually I have good experience in android development");
-  alert('Wrong, actually I have good experience in android development');
-}
 
-//Q4
-var germanSpeakAnswer = prompt('Do you think that I can speak German(yes/no), (Y/n?)').toLowerCase();
-while(!isValidInput(germanSpeakAnswer) || germanSpeakAnswer ===''){
-  germanSpeakAnswer = prompt('Do you think that I can speak German(yes/no), (Y/n?)').toLowerCase();
-}
-if (germanSpeakAnswer === 'yes' || germanSpeakAnswer === 'y'){
-  //console.log("Unfortunately I can NOT speak German");
-  alert('Unfortunately I can NOT speak German');
-}else{
-  //console.log("This is correct I can not speak German");
-  alert('This is correct I can not speak German');
-  score+=1;
-}
 
-//Q5
 
-var leaderAnswer = prompt('Do you think that I am a leader(yes/no), (Y/n?)').toLowerCase();
-while(!isValidInput(leaderAnswer) || leaderAnswer ===''){
-  leaderAnswer = prompt('Do you think that I am a leader(yes/no), (Y/n?)').toLowerCase();
-}
-if(leaderAnswer === 'no' || leaderAnswer === 'n'){
-  //console.log("Not quiet, I am a good leader, read the page to know about me");
-  alert('Not quiet, I am a good leader, read the page to know about me');
-}else{
-  //console.log("This is right, I am good leader");
-  alert('This is right, I am good leader');
-  score+=1;
-}
+
+// var colorAnswer = prompt('Do you think that black is my favorite color (yes/no), (Y/n)?').toLowerCase();
+
+// while(!isValidInput(colorAnswer) || colorAnswer === ''){
+//   colorAnswer = prompt('Do you think that black is my favorite color (yes/no), (Y/n)?').toLowerCase();
+
+// }
+// if(colorAnswer === 'yes' || colorAnswer === 'y'){
+//   //console.log("This is correct, my favorite color is black");
+//   alert('This is correct, my favorite color is black');
+//   score+=1;
+// }else{
+//   //console.log("Wrong, my favorite color is balck");
+//   alert('Wrong, my favorite color is balck');
+// }
+
+// //Q2
+// var movieAnswer = prompt('Do you think that my favorite movie is The Prestige (yes/no), (Y/n?)').toLowerCase();
+// while(!isValidInput(movieAnswer) || movieAnswer === ''){
+//   movieAnswer = prompt('Do you think that my favorite movie is The Prestige (yes/no), (Y/n?)').toLowerCase();
+// }
+// if(movieAnswer === 'yes' || movieAnswer === 'y'){
+//   //console.log("This is correct, my favorite movie is The Prestige");
+//   alert('This is correct, my favorite movie is The Prestige');
+//   score+=1;
+// }else{
+//   //console.log("Wrong, my favorite movie is The Prestige");
+//   alert('Wrong, my favorite movie is The Prestige');
+// }
+
+// //Q3
+// var androidDevelopingAnswer = prompt('Do you think that I\'m familiar with Android Development(yes/no), (Y/n?)').toLowerCase();
+// while(!isValidInput(androidDevelopingAnswer) || androidDevelopingAnswer ===''){
+//   androidDevelopingAnswer = prompt('Do you think that I\'m familiar with Android Development(yes/no), (Y/n?)').toLowerCase();
+// }
+// if(androidDevelopingAnswer === 'yes' || androidDevelopingAnswer === 'y'){
+//   //console.log("This is correct, I can develop apps in android");
+//   alert('This is correct, I can develop apps in android');
+//   score+=1;
+// }else{
+//   //console.log("Wrong, actually I have good experience in android development");
+//   alert('Wrong, actually I have good experience in android development');
+// }
+
+// //Q4
+// var germanSpeakAnswer = prompt('Do you think that I can speak German(yes/no), (Y/n?)').toLowerCase();
+// while(!isValidInput(germanSpeakAnswer) || germanSpeakAnswer ===''){
+//   germanSpeakAnswer = prompt('Do you think that I can speak German(yes/no), (Y/n?)').toLowerCase();
+// }
+// if (germanSpeakAnswer === 'yes' || germanSpeakAnswer === 'y'){
+//   //console.log("Unfortunately I can NOT speak German");
+//   alert('Unfortunately I can NOT speak German');
+// }else{
+//   //console.log("This is correct I can not speak German");
+//   alert('This is correct I can not speak German');
+//   score+=1;
+// }
+
+// //Q5
+
+// var leaderAnswer = prompt('Do you think that I am a leader(yes/no), (Y/n?)').toLowerCase();
+// while(!isValidInput(leaderAnswer) || leaderAnswer ===''){
+//   leaderAnswer = prompt('Do you think that I am a leader(yes/no), (Y/n?)').toLowerCase();
+// }
+// if(leaderAnswer === 'no' || leaderAnswer === 'n'){
+//   //console.log("Not quiet, I am a good leader, read the page to know about me");
+//   alert('Not quiet, I am a good leader, read the page to know about me');
+// }else{
+//   //console.log("This is right, I am good leader");
+//   alert('This is right, I am good leader');
+//   score+=1;
+// }
 
 //Q6
 //var myNumber = 16;
@@ -153,9 +171,20 @@ alert('Correct answers are:\n'+ allCorrectAnswers);
 alert('your score for the seven questions is: ' + score + '/7');
 
 //This function check user input
-function isValidInput(message) {
-  return message === undefined
-        || message === 'yes' || message === 'y' || message === 'no' || message === 'n';
+function mainQuestion(answer,message,rightAnswer) {
+
+  answer = answer.toLowerCase();
+  while(answer !== 'y' && answer !== 'n' && answer !== 'yes' && answer !== 'no'){
+    answer = prompt(message);
+  }
+
+  answer = answer.toLowerCase()[0];
+  if(answer === rightAnswer){
+    alert('That is  correct');
+    score++;
+  }else {
+    alert('Wrong answer ..');
+  }
 }
 
 //This function searches the array for a specific value, and returns true
@@ -170,4 +199,13 @@ function searchArray(value, arr) {
     }
   }
   return found;
+}
+
+
+function validation(answer , message ){
+  while(answer === null || answer=== undefined || answer=== ''){
+
+    answer = prompt(message);
+  }
+  return answer;
 }
