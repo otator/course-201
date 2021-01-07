@@ -41,7 +41,7 @@ header{
 footer{
 
     border: blue solid 2px;
-    background: linear-gradient(to right, #43c7cc, #102a2e, #2b7d83);
+    background: linear-gradient(to right, #43c7cc, #102a2e, #061213);
 }
 .movie-name{
     color: rgb(0, 0, 0);
