@@ -1,12 +1,14 @@
-
+body{
+    background: #648880;
+  background: linear-gradient(to right, #f6f1d3, #648880, #293f50);}
 h1{
-    font-size: 36px;
+    font-size: 48px;
     font-family: monospace;
     color: black;
     padding:2px;
     
     font-weight: bold;
-    text-shadow: 2px 2px blue;
+    text-shadow: 5px 5px 4px rgb(2, 5, 185);
 
 }
 h2{
@@ -32,14 +34,14 @@ span{
     font-style: italic;
 }
 header{
-    
-    padding:5px;
-    background-color: rgba(0, 0, blue, alpha0.7);
+    padding:10px;
+    background: linear-gradient(to right, #8d9df8, #010005, #081c2b);
     
 }
 footer{
-    padding:5px;
+
     border: blue solid 2px;
+    background: linear-gradient(to right, #43c7cc, #102a2e, #2b7d83);
 }
 .movie-name{
     color: rgb(0, 0, 0);
@@ -63,7 +65,8 @@ footer{
     margin-bottom: 50px;
     transform: translatey(-200%);
     border: cornflowerblue 2px solid;
-    padding:2px
+    padding:2px;
+    font-weight: bold;
 }
 li a:link{
     text-decoration: none;
