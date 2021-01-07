@@ -1,6 +1,5 @@
 'use strict';
 var userName = prompt('Enter Your name below');
-//console.log("user name:" + userName);
 var greetingMessage = 'Hello ' + userName + ', Welcome to About Me page';
 alert(greetingMessage);
 
